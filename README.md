@@ -1,7 +1,7 @@
 # Stock Market Scraper
 
 ## Overview
-This **Stock Market Scraper** is a Python-powered, API-driven, machine-learning-enabled script that fetches, analyzes, and predicts stock market trends for the **top 100 global companies**. It leverages the **Yahoo Finance API (`yfinance`)** to pull extensive stock data, applies **time-series forecasting** using **Meta’s Prophet model**, and saves everything into a structured **CSV file** for further analysis. 
+This **Stock Market Scraper** is a Python-powered, API-driven, machine-learning-enabled script that fetches, analyzes, and predicts stock market trends for the **top 100 global companies**. It leverages the **Yahoo Finance API (`yfinance`)** to pull extensive stock data, applies **time-series forecasting** using **Meta’s Prophet model**, and saves everything into a structured **CSV file** for further analysis. The **dashboard** analyzes key stock data such as market cap, growth potential, P/E ratios, dividend yield, and future price predictions for top global companies. It provides interactive charts, including pie charts, bar charts, scatter plots, and treemaps to facilitate decision-making for data analysts and investors.
 
 In simple terms: This script is like a personal stock market assistant that tirelessly scrapes, organizes, and predicts stock prices so you don’t have to!
 
@@ -12,6 +12,14 @@ In simple terms: This script is like a personal stock market assistant that tire
 - **Error Handling & Rate Limiting**: Prevents API rejection by smartly managing request frequency.
 - **Timezone Normalization**: Fixes pesky time-zone issues in financial data.
 - **Fully Automated Output**: Exports all the juicy data into a neat, structured `CSV` file.
+- **Market Cap by Sector**: Displays the distribution of market capitalization across various sectors.
+- **Top 10 Companies by Market Cap**: Ranks and visualizes the top 10 companies by market capitalization.
+- **Top Growth Stocks**: Highlights stocks with the highest potential for growth based on their future price prediction.
+- **Predicted Declining Stocks**: Identifies stocks that are expected to decline in the near future.
+- **PE Ratio vs Dividend Yield**: Plots a scatter chart visualizing the relationship between P/E ratios and dividend yields.
+- **Market Cap Treemap**: Displays a treemap of the top 10 companies based on market cap.
+- **Current Price vs Future Prediction**: Compares the current stock price with the predicted future stock price for the top 10 companies.
+
 
 ## How It Works (aka "The Secret Sauce")
 1. **Ticker List Creation**: The script starts with a curated list of the top 100 global stock tickers.
@@ -50,13 +58,29 @@ In simple terms: This script is like a personal stock market assistant that tire
   ```bash
   pip install pandas yfinance prophet
   ```
-
+- **pandas** - for data manipulation
+- **numpy** - for numerical calculations
+- **matplotlib** & **seaborn** - for plotting visualizations
+- **plotly** - for interactive plots
+- **plotly.express** - for generating scatter and bar charts
+- **colab** - for running this notebook on Google Colab
+  
 ## Usage
 ### Run the script in Google Colab or locally
 ```bash
 python stock_scraper.py
 ```
+
 The script will generate `Top_100_Companies_Stock_Data.csv` in the same directory.
+
+To begin using the dashboard, download the Jupyter notebook file `Top_100_Companies_Stock_Analysis.ipynb` or click on the following link:
+
+[Download `Top_100_Companies_Stock_Analysis.ipynb`](./Top_100_Companies_Stock_Analysis.ipynb)
+
+Alternatively, you can access the `.html` version directly on the **Google Colab** platform. To access the Colab version, use the following link:
+
+[Open in Google Colab](./Top_100_Companies_Stock_Analysis.ipynb)
+
 
 ### Download CSV in Google Colab
 If using Google Colab, download the file with:
